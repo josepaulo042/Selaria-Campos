@@ -1,0 +1,119 @@
+@import url("styles/header.css");
+
+:root {
+    --cor-de-fundo: #C9AA7D;
+    --cor-cabecalho: #C9AA7D;
+    --branco: #FFFFFF;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+}
+.cabeçalho__menu-hamburguer {
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    background-image: url("img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cabeçalho {
+    background-color: var(--cor-cabecalho);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+.barra-de-pesquisa{
+    width: 40vw;
+    height: 25px;
+    border-radius: 40px;
+    background-color: white;
+    border: solid 2px #000000;
+}
+.barra-de-pesquisa::placeholder {
+    text-align: right;
+    background: url("/img/Lupa.svg") no-repeat;
+    background-position: 1em;  
+}
+.main { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+ 
+}
+.galery {
+    height: 60vw;
+    width: 60vw;
+    overflow: hidden;
+}
+
+.galery .fotos {
+    width: 500%;
+    animation-name: animacao;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.galery .fotos img {
+    width: 20%;
+    height: 60vw;
+}
+.textos{
+    padding: 10vw;
+    display: flex;
+    justify-content: space-around;
+}
+.texto{
+    font-size: 25px;
+    padding-bottom: 0.5em;
+}
+.texto1{
+    display: none;
+}
+footer{
+    display: none;
+}
+@media screen and (min-width: 900px) {
+    .barra-de-pesquisa{
+        width: 15vw;
+        margin-left: -30vw;
+    }
+    .texto1{
+        display: block;
+        font-size: 58px;
+        margin-left: -30vw;
+    }
+    .galery{
+        width: 30vw;
+        height: 30vw;
+    }.galery .fotos img {
+        width: 20%;
+        height: 30vw;
+    }
+    .cabeçalho__menu-hamburguer {
+        margin-left: 2vw;
+    }.texto{
+        font-size: 50px;
+    }
+    footer{
+        display: block;
+        background-color: #000000;
+        color: #C9AA7D;
+        height: 50px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}
